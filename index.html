@@ -14,10 +14,19 @@
   source) doit etre re-uploadee a la main dans ce repo, sinon elle n'existe
   que dans le depot Nebulion.
 
-  ⚠️ NE PAS PUBLIER EN L'ETAT : le contenu vient de docs/privacy-policy.md, qui
-  contient encore 5 [PLACEHOLDER] et n'a pas eu de relecture juridique. Ils sont
-  rendus en jaune (.todo) exactement pour qu'on ne puisse pas les rater. Voir la
-  liste "Encore a faire" en tete de docs/privacy-policy.md.
+  2026-08-31 : les 5 [PLACEHOLDER] sont remplis avec des faits verifies (region
+  Neon eu-central-1/Francfort lue dans backend/.env, retention OpenAI API 30 j /
+  pas d'entrainement par defaut, Sentry 90 j, purge des sauvegardes bornee a
+  7 j) et deux affirmations perimees corrigees (identifiants de notification --
+  le rappel est local ; essai "3 reves" -> 1 reve). Le detail et les sources
+  sont dans l'en-tete de docs/privacy-policy.md. PUBLIABLE pour debloquer
+  l'OAuth Google -- la relecture juridique reste due avant le lancement stores.
+
+  2026-08-31 (bis, migration R2) : sections 4/5/7 completees -- les images de
+  reve sont desormais sur Cloudflare R2, plus dans Postgres. ⚠️ Avant de
+  re-uploader cette version dans le repo Pages : verifier que le bucket a bien
+  ete cree avec l'option "Jurisdiction: European Union" (choix possible
+  uniquement a la creation), sinon adoucir la phrase de la section 4.
 -->
 <!doctype html>
 <html lang="fr">
@@ -121,7 +130,7 @@
 
 <span class="wordmark">Onifide</span>
 <h1>Politique de confidentialité</h1>
-<p class="updated">Dernière mise à jour : <span class="todo">[PLACEHOLDER — date de publication réelle]</span></p>
+<p class="updated">Dernière mise à jour : 31 août 2026</p>
 
 <p>Cette politique explique quelles données Onifide collecte, pourquoi, où elles sont stockées, et quels sont vos droits. Nous avons essayé de l'écrire de façon lisible plutôt que dans un jargon juridique impénétrable — si un passage reste flou, contactez-nous (voir §9).</p>
 
@@ -168,7 +177,7 @@
     </tr>
     <tr>
       <td>Technique</td>
-      <td>adresse IP au moment de la requête, logs d'erreur (via Sentry, filtrés — voir §5), identifiants d'appareil pour les notifications</td>
+      <td>adresse IP au moment de la requête, logs d'erreur (via Sentry, filtrés — voir §5)</td>
       <td>Sécurité, fiabilité, débogage</td>
     </tr>
     <tr>
@@ -179,16 +188,18 @@
   </tbody>
 </table>
 </div>
-<p>Nous ne collectons <strong>jamais</strong> de données de localisation précise, de contacts, de photos, ou d'autres données de votre appareil au-delà de ce qui est listé ci-dessus.</p>
+<p>Nous ne collectons <strong>jamais</strong> de données de localisation précise, de contacts, de photos, ou d'autres données de votre appareil au-delà de ce qui est listé ci-dessus. Le rappel du matin est une notification locale programmée sur votre téléphone : aucun identifiant d'appareil ni aucun contenu ne quitte l'appareil pour la déclencher.</p>
 
 <h2>4. Où vos données sont stockées</h2>
-<p>Vos données sont stockées sur une base de données PostgreSQL hébergée par <strong>Neon</strong> (hébergement cloud, infrastructure aux États-Unis et/ou dans l'Union européenne selon la configuration retenue — <span class="todo">[PLACEHOLDER : confirmer la région Neon effective avant publication]</span>). Contrairement à une application qui garderait tout uniquement sur votre appareil, Onifide a besoin d'un serveur pour générer les interprétations et synchroniser votre journal entre vos appareils — c'est un choix d'architecture assumé, pas un oubli.</p>
+<p>Vos données sont stockées sur une base de données PostgreSQL hébergée par <strong>Neon</strong>, dans l'Union européenne (région AWS <code>eu-central-1</code>, Francfort, Allemagne). Contrairement à une application qui garderait tout uniquement sur votre appareil, Onifide a besoin d'un serveur pour générer les interprétations et synchroniser votre journal entre vos appareils — c'est un choix d'architecture assumé, pas un oubli.</p>
+<p>Seule exception : les images de rêve générées (Premium/Ultime) sont stockées sur <strong>Cloudflare R2</strong> (stockage de fichiers), dans un espace créé en juridiction Union européenne. Elles y sont identifiées par des identifiants techniques, jamais par votre email ni par le texte du rêve.</p>
 
 <h2>5. Les tiers avec qui vos données transitent</h2>
 <p>Nous n'utilisons que le strict nécessaire, et jamais pour vous cibler publicitairement à partir du contenu de vos rêves (voir §6).</p>
 <ul>
-  <li><strong>OpenAI</strong> (États-Unis) : le texte de vos rêves est envoyé à OpenAI pour générer les vecteurs de similarité (embeddings) qui permettent de retrouver le contenu pertinent dans notre bibliothèque documentaire, puis pour rédiger l'interprétation elle-même. Le texte d'un rêve est également envoyé une seule fois pour en extraire les étiquettes qui alimentent le profil psychologique évolutif (figures, motifs, symboles) ; l'agrégation qui suit est faite chez nous, sans nouvel envoi. En revanche, la génération d'une image de rêve ne reçoit <strong>jamais</strong> le texte brut : elle part uniquement des symboles déjà extraits, transformés en une courte description visuelle. OpenAI traite ces données pour notre compte, dans le cadre d'un accord de traitement de données ; nous avons désactivé, quand l'option existe, l'usage de ce contenu pour l'entraînement des modèles d'OpenAI. <span class="todo">[PLACEHOLDER : confirmer le statut exact Zero Data Retention / opt-out entraînement selon le contrat OpenAI en vigueur au lancement.]</span></li>
+  <li><strong>OpenAI</strong> (États-Unis) : le texte de vos rêves est envoyé à OpenAI pour générer les vecteurs de similarité (embeddings) qui permettent de retrouver le contenu pertinent dans notre bibliothèque documentaire, puis pour rédiger l'interprétation elle-même. Le texte d'un rêve est également envoyé une seule fois pour en extraire les étiquettes qui alimentent le profil psychologique évolutif (figures, motifs, symboles) ; l'agrégation qui suit est faite chez nous, sans nouvel envoi. En revanche, la génération d'une image de rêve ne reçoit <strong>jamais</strong> le texte brut : elle part uniquement des symboles déjà extraits, transformés en une courte description visuelle. OpenAI traite ces données pour notre compte, dans le cadre d'un accord de traitement de données. Les données envoyées via l'API d'OpenAI ne sont pas utilisées pour entraîner ses modèles (c'est le fonctionnement par défaut de l'API, contrairement au ChatGPT grand public) et sont conservées par OpenAI au maximum 30 jours à des fins de détection d'abus, puis supprimées.</li>
   <li><strong>Sentry</strong> (suivi d'erreurs) : les erreurs techniques de l'application sont remontées à Sentry pour nous permettre de corriger les bugs. Les champs de texte libre (contenu de rêve, notes d'humeur, transcripts d'exercice) sont explicitement filtrés (scrubbing) avant tout envoi — ils ne doivent jamais apparaître dans un événement Sentry.</li>
+  <li><strong>Cloudflare</strong> (stockage R2) : héberge uniquement les images de rêve générées (voir §4). Cloudflare ne reçoit jamais le texte de vos rêves ni aucune autre donnée de votre journal — seulement le fichier image lui-même. Ces images sont supprimées de R2 en même temps que votre compte.</li>
   <li><strong>Apple / Google</strong> : pour l'authentification « Se connecter avec Apple/Google » si vous choisissez cette option, et pour la gestion des abonnements via les stores.</li>
   <li><strong>RevenueCat</strong> : gère l'état de votre abonnement entre les stores et notre serveur. Reçoit un identifiant d'abonné et les informations d'achat transmises par le store, jamais le contenu de votre journal.</li>
 </ul>
@@ -196,12 +207,12 @@
 
 <h2>6. Publicité et absence de ciblage sur le contenu de vos rêves</h2>
 <div class="callout">
-  <p><strong>Onifide n'embarque aucun SDK publicitaire.</strong> Le tier gratuit est un essai de trois rêves, pas un tier financé par la publicité — il n'y a donc aucune régie qui reçoive quoi que ce soit.</p>
+  <p><strong>Onifide n'embarque aucun SDK publicitaire.</strong> Le tier gratuit est un essai (un premier rêve offert), pas un tier financé par la publicité — il n'y a donc aucune régie qui reçoive quoi que ce soit.</p>
 </div>
 <p>Si une publicité devait être introduite un jour, l'engagement suivant resterait entier : aucune régie ne recevrait le contenu de vos rêves, vos notes d'humeur, les transcripts de vos exercices, ni aucun signal calculé à partir de ces données. Il n'y aura jamais de « ciblage intelligent » basé sur ce que vous confiez à votre journal.</p>
 
 <h2>7. Combien de temps nous gardons vos données</h2>
-<p>Vos données sont conservées tant que votre compte existe. Si vous supprimez votre compte (disponible directement dans Réglages), vos données (rêves, interprétations, humeur, exercices, profils psychologiques, et le compte lui-même) sont supprimées <strong>immédiatement et définitivement</strong> de notre base active — il ne s'agit pas d'une désactivation, la suppression est réelle. <span class="todo">[PLACEHOLDER : préciser le délai de purge dans les sauvegardes techniques automatiques de la base de données, si applicable]</span>. Les logs techniques et les événements d'erreur (Sentry) sont conservés selon une durée plus courte, à usage de sécurité et de débogage uniquement <span class="todo">[PLACEHOLDER : préciser la durée de rétention Sentry configurée]</span>.</p>
+<p>Vos données sont conservées tant que votre compte existe. Si vous supprimez votre compte (disponible directement dans Réglages), vos données (rêves, interprétations, images de rêve, humeur, exercices, profils psychologiques, et le compte lui-même) sont supprimées <strong>immédiatement et définitivement</strong> de notre base active et du stockage d'images — il ne s'agit pas d'une désactivation, la suppression est réelle. L'historique technique de restauration conservé par notre hébergeur de base de données expire ensuite automatiquement, sous 7 jours au plus. Les événements d'erreur (Sentry) sont conservés 90 jours au maximum, à usage de sécurité et de débogage uniquement.</p>
 
 <h2>8. Vos droits</h2>
 <p>Conformément au RGPD (et pour tous nos utilisateurs, où qu'ils soient, pas seulement dans l'Union européenne), vous pouvez à tout moment :</p>
