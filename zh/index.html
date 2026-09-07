@@ -1,0 +1,235 @@
+<!-- Onifide privacy policy — Simplified Chinese translation generated from the French reference (docs/privacy-policy.md), 2026-09-06. Assistant-drafted, pending owner review. -->
+<!doctype html>
+<html lang="zh-Hans">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Onifide — 隐私政策</title>
+  <meta name="description" content="Onifide 隐私政策：我们收集哪些数据、数据存储在哪里、会经由哪些第三方传输，以及如何导出或删除这些数据。" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&family=Marcellus&display=swap" />
+  <link rel="canonical" href="https://ctoomnai.github.io/Onifide_privacy-policy/zh/" />
+  <meta name="theme-color" content="#0B1230" />
+  <link rel="alternate" hreflang="en" href="https://ctoomnai.github.io/Onifide_privacy-policy/" />
+  <link rel="alternate" hreflang="fr" href="https://ctoomnai.github.io/Onifide_privacy-policy/fr/" />
+  <link rel="alternate" hreflang="de" href="https://ctoomnai.github.io/Onifide_privacy-policy/de/" />
+  <link rel="alternate" hreflang="es" href="https://ctoomnai.github.io/Onifide_privacy-policy/es/" />
+  <link rel="alternate" hreflang="pt" href="https://ctoomnai.github.io/Onifide_privacy-policy/pt/" />
+  <link rel="alternate" hreflang="ar" href="https://ctoomnai.github.io/Onifide_privacy-policy/ar/" />
+  <link rel="alternate" hreflang="zh" href="https://ctoomnai.github.io/Onifide_privacy-policy/zh/" />
+  <link rel="alternate" hreflang="ko" href="https://ctoomnai.github.io/Onifide_privacy-policy/ko/" />
+  <link rel="alternate" hreflang="ja" href="https://ctoomnai.github.io/Onifide_privacy-policy/ja/" />
+  <link rel="alternate" hreflang="x-default" href="https://ctoomnai.github.io/Onifide_privacy-policy/" />
+  <style>
+    /* Palette de branding.json — meme parti pris que la landing : pas de theme
+       clair, la marque est le bleu nuit. */
+    :root {
+      --night: #0B1230;
+      --night-2: #131A42;
+      --sky: #AFCBFF;
+      --violet: #7C5CFC;
+      --text: #F2F1F8;
+      --text-muted: #8991BD;
+      --border: rgba(255,255,255,.10);
+      --surface: rgba(255,255,255,.05);
+    }
+    * { box-sizing: border-box; }
+    body {
+      font-family: "Nunito", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      max-width: 760px;
+      margin: 0 auto;
+      padding: 48px 22px 72px;
+      color: var(--text);
+      background: var(--night);
+      line-height: 1.65;
+    }
+    .wordmark {
+      font-family: "Marcellus", Georgia, "Times New Roman", serif;
+      text-transform: uppercase;
+      letter-spacing: .2em;
+      padding-left: .2em;
+      font-size: 15px;
+      color: var(--sky);
+      display: block;
+      margin-bottom: 10px;
+    }
+    h1 { font-size: 28px; font-weight: 800; letter-spacing: -0.02em; margin: 0 0 6px; }
+    h2 {
+      font-size: 18px;
+      font-weight: 800;
+      margin: 38px 0 10px;
+      padding-top: 20px;
+      border-top: 1px solid var(--border);
+    }
+    .updated { color: var(--text-muted); font-size: 14px; margin: 0 0 26px; }
+    p, li { font-size: 15.5px; }
+    p { color: var(--text); }
+    a { color: var(--sky); }
+    strong { font-weight: 800; }
+    ul { padding-left: 20px; }
+    li { margin-bottom: 8px; color: var(--text); }
+    table { width: 100%; border-collapse: collapse; margin: 14px 0 4px; font-size: 14px; }
+    th, td { text-align: left; vertical-align: top; padding: 10px 12px; border: 1px solid var(--border); }
+    th { background: var(--night-2); font-weight: 800; color: var(--sky); }
+    td { background: var(--surface); color: var(--text-muted); }
+    td:first-child { color: var(--text); font-weight: 700; white-space: nowrap; }
+    .table-wrap { overflow-x: auto; }
+    .callout {
+      background: rgba(124,92,252,.12);
+      border: 1px solid rgba(124,92,252,.4);
+      border-radius: 14px;
+      padding: 14px 18px;
+      margin: 18px 0;
+    }
+    .callout p { margin: 0; }
+    /* Marqueurs volontairement criards : tant qu'il en reste un visible sur la
+       page, elle n'est pas publiable. */
+    .todo {
+      background: rgba(255,214,102,.18);
+      border: 1px dashed rgba(255,214,102,.6);
+      border-radius: 6px;
+      padding: 1px 6px;
+      color: #FFD666;
+      font-weight: 700;
+      font-size: 13.5px;
+    }
+    footer {
+      margin-top: 44px;
+      padding-top: 20px;
+      border-top: 1px solid var(--border);
+      font-size: 13px;
+      color: var(--text-muted);
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px 18px;
+      justify-content: space-between;
+    }
+    footer a { color: var(--text-muted); }
+      /* Selecteur de langue (9 versions, anglais a la racine). */
+    .langs { display: flex; flex-wrap: wrap; gap: 6px 14px; margin: 0 0 22px; font-size: 13px; }
+    .langs a { color: var(--text-muted); text-decoration: none; }
+    .langs a:hover { color: var(--sky); text-decoration: underline; }
+    .langs a[aria-current="page"] { color: var(--sky); font-weight: 700; }
+  </style>
+</head>
+<body>
+
+<nav class="langs" aria-label="Language"><a href="https://ctoomnai.github.io/Onifide_privacy-policy/" hreflang="en" lang="en">English</a> <a href="https://ctoomnai.github.io/Onifide_privacy-policy/fr/" hreflang="fr" lang="fr">Français</a> <a href="https://ctoomnai.github.io/Onifide_privacy-policy/de/" hreflang="de" lang="de">Deutsch</a> <a href="https://ctoomnai.github.io/Onifide_privacy-policy/es/" hreflang="es" lang="es">Español</a> <a href="https://ctoomnai.github.io/Onifide_privacy-policy/pt/" hreflang="pt" lang="pt">Português</a> <a href="https://ctoomnai.github.io/Onifide_privacy-policy/ar/" hreflang="ar" lang="ar">العربية</a> <a href="https://ctoomnai.github.io/Onifide_privacy-policy/zh/" hreflang="zh" lang="zh" aria-current="page">中文</a> <a href="https://ctoomnai.github.io/Onifide_privacy-policy/ko/" hreflang="ko" lang="ko">한국어</a> <a href="https://ctoomnai.github.io/Onifide_privacy-policy/ja/" hreflang="ja" lang="ja">日本語</a></nav>
+<span class="wordmark">Onifide</span>
+<h1>隐私政策</h1>
+<p class="updated">最后更新：2026年9月6日</p>
+<p class="updated">本译文仅供参考。如有出入，以法语版本为准。</p>
+
+<p>本政策说明 Onifide 收集哪些数据、为何收集、数据存储在哪里，以及你享有哪些权利。我们尽量以易读的方式来写，而不是使用晦涩难懂的法律术语——如果某段内容仍不清楚，请联系我们（见第9条）。</p>
+
+<h2>1. 谁对你的数据负责</h2>
+<p>Onifide 由 Mohamed Djamil 发布，其为个体企业（SIREN 108339714，主营业场所 SIRET 108339714 00017），位于法国图卢兹。他是《通用数据保护条例》（GDPR）意义上你的数据的处理责任人——与发布者的第一款产品 TallUp 采用同一主体结构。</p>
+
+<h2>2. Onifide 不是什么</h2>
+<p>在谈数据之前先说明：Onifide 既不是宗教权威，也不是医疗或心理服务。梦境解读是由人工智能基于文献语料库生成的反思工具，绝不是绝对真理、诊断或预言。详情请参阅<a href="https://onifide.omnaiapps.com/cgu/">使用条款</a>。</p>
+
+<h2>3. 我们收集的数据</h2>
+<div class="table-wrap">
+<table>
+  <thead><tr><th>类别</th><th>示例</th><th>目的</th></tr></thead>
+  <tbody>
+    <tr>
+      <td>账户</td>
+      <td>电子邮箱、密码（经哈希处理）、Apple/Google 标识符（如适用）、语言、默认解读流派</td>
+      <td>创建并保护你的账户</td>
+    </tr>
+    <tr>
+      <td>梦境内容</td>
+      <td>你的梦境文本、日期、醒来时的心情、你添加的标签</td>
+      <td>服务的核心：生成你的梦境解读</td>
+    </tr>
+    <tr>
+      <td>心情</td>
+      <td>你每日自由记录的心情条目</td>
+      <td>心情追踪功能</td>
+    </tr>
+    <tr>
+      <td>练习</td>
+      <td>你完成的引导式反思练习（自由联想、积极想象、噩梦改写）的对话记录</td>
+      <td>保存你的练习历史</td>
+    </tr>
+    <tr>
+      <td>演进式心理画像</td>
+      <td>从你的梦境文本中提取的简短标签（反复出现的人物、叙事母题、符号）及其计数——每个梦只分析一次，画像只显示至少在两个梦中出现过的元素</td>
+      <td>Premium/Ultime 的演进式画像功能</td>
+    </tr>
+    <tr>
+      <td>梦境图片</td>
+      <td>当你请求时为某个梦生成的图片（Premium/Ultime）</td>
+      <td>按需生成的梦境插图</td>
+    </tr>
+    <tr>
+      <td>技术数据</td>
+      <td>请求时的 IP 地址、错误日志（通过 Sentry，经过滤——见第5条）</td>
+      <td>安全、可靠性、调试</td>
+    </tr>
+    <tr>
+      <td>订阅</td>
+      <td>订阅状态、应用商店（Apple/Google）的交易标识符</td>
+      <td>计费以及付费功能的访问权限</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+<p>除上述内容外，我们<strong>绝不</strong>收集精确位置数据、联系人、照片或你设备上的其他数据。早晨提醒是一条在你手机上本地安排的通知：触发它时，没有任何设备标识符或任何内容会离开你的设备。</p>
+
+<h2>4. 你的数据存储在哪里</h2>
+<p>你的数据存储在由 <strong>Neon</strong> 托管的 PostgreSQL 数据库中，位于欧盟境内（AWS <code>eu-central-1</code> 区域，德国法兰克福）。与将所有内容仅保存在你设备上的应用不同，Onifide 需要一台服务器来生成解读并在你的多台设备之间同步日记——这是一个经过慎重考虑的架构选择，而非疏忽。</p>
+<p>唯一的例外：生成的梦境图片（Premium/Ultime）存储在 <strong>Cloudflare R2</strong>（文件存储）上，位于一个以欧盟为司法管辖区创建的存储空间中。图片在那里仅以技术标识符标识，绝不会以你的电子邮箱或梦境文本标识。</p>
+
+<h2>5. 你的数据会经由哪些第三方</h2>
+<p>我们只使用绝对必要的第三方服务，并且绝不会根据你的梦境内容对你进行广告定向（见第6条）。</p>
+<ul>
+  <li><strong>OpenAI</strong>（美国）：你的梦境文本会被发送至 OpenAI，用于生成相似度向量（embeddings），以便在我们的文献库中找到相关内容，随后用于撰写解读本身。一个梦的文本还会被发送一次，用于提取为演进式心理画像提供数据的标签（人物、母题、符号）；之后的汇总在我们这里完成，不会再次发送。相反，梦境图片的生成<strong>绝不</strong>会接收原始文本：它仅基于已提取的符号，这些符号会被转化为一段简短的视觉描述。OpenAI 依据数据处理协议代表我们处理这些数据。通过 OpenAI API 发送的数据不会用于训练其模型（这是 API 的默认运作方式，与面向大众的 ChatGPT 不同），并由 OpenAI 最多保留 30 天用于滥用检测，之后删除。</li>
+  <li><strong>Sentry</strong>（错误追踪）：应用的技术错误会上报至 Sentry，以便我们修复缺陷。自由文本字段（梦境内容、心情笔记、练习对话记录）在任何发送之前都会被明确过滤（scrubbing）——它们绝不应出现在任何 Sentry 事件中。</li>
+  <li><strong>Cloudflare</strong>（R2 存储）：仅托管生成的梦境图片（见第4条）。Cloudflare 绝不会收到你的梦境文本或你日记中的任何其他数据——只有图片文件本身。这些图片会在你删除账户的同时从 R2 中删除。</li>
+  <li><strong>系统语音识别（Apple / Google）</strong>：如果你选择<strong>口述</strong>梦境而不是打字输入，应用会优先使用<strong>你设备上的离线</strong>语音识别——在这种情况下，音频绝不会离开你的手机。当你的设备无法离线转写时（取决于机型、操作系统版本或语言），转写将由系统的语音识别服务（Apple 或 Google）完成，音频会在转写期间传输给该服务。而我们这边只会收到转写后的<strong>文本</strong>，绝不会收到音频。用键盘输入梦境则不涉及上述任何服务。</li>
+  <li><strong>Apple / Google</strong>：如果你选择“通过 Apple/Google 登录”这一选项，用于身份验证；以及通过应用商店管理订阅。</li>
+  <li><strong>RevenueCat</strong>：在应用商店与我们的服务器之间管理你的订阅状态。它会收到一个订阅者标识符以及由应用商店传递的购买信息，绝不会收到你日记的内容。</li>
+  <li><strong>Brevo</strong>（电子邮件发送，欧盟）：仅传递由你自己触发的服务邮件——你的邮箱地址验证码和密码重置码。Brevo 会收到你的电子邮箱地址和该邮件的内容，绝不会收到你日记的内容。我们不发送任何新闻通讯或营销邮件。</li>
+</ul>
+<p>我们绝不会将你的数据出售给任何人。</p>
+
+<h2>6. 广告以及不基于你的梦境内容进行定向</h2>
+<div class="callout">
+  <p><strong>Onifide 不内置任何广告 SDK。</strong>免费层级是一次试用（赠送第一个梦），而不是靠广告支撑的层级——因此没有任何广告平台会收到任何东西。</p>
+</div>
+<p>如果将来有一天引入广告，以下承诺仍将完整保留：任何广告平台都不会收到你的梦境内容、心情笔记、练习对话记录，或任何基于这些数据计算出的信号。绝不会有基于你在日记中所倾诉内容的“智能定向”。</p>
+
+<h2>7. 我们保留你的数据多长时间</h2>
+<p>只要你的账户存在，你的数据就会被保留。如果你删除账户（可直接在“设置”中操作），你的数据（梦境、解读、梦境图片、心情、练习、心理画像以及账户本身）会从我们的活动数据库和图片存储中<strong>立即且永久</strong>删除——这不是停用，而是真正的删除。我们的数据库托管商保留的技术恢复历史随后会自动过期，最长不超过 7 天。错误事件（Sentry）最多保留 90 天，仅用于安全和调试目的。</p>
+
+<h2>8. 你的权利</h2>
+<p>根据 GDPR（并适用于我们所有用户，无论身在何处，不仅限于欧盟境内），你可以随时：</p>
+<ul>
+  <li><strong>导出你的数据</strong>：“设置”→“导出我的数据”会生成一份 JSON 格式的完整导出（梦境、解读、心情、练习、心理画像）。</li>
+  <li><strong>删除你的账户</strong>：“设置”→“删除我的账户”——此操作是最终且不可撤销的。</li>
+  <li><strong>访问、更正你的数据或反对</strong>对其进行的处理：请联系我们（第9条）。</li>
+  <li><strong>提出投诉</strong>：如果你认为你的权利未得到尊重，可向 CNIL（法国数据保护机构，Commission Nationale de l'Informatique et des Libertés，<a href="https://www.cnil.fr">www.cnil.fr</a>）投诉。</li>
+</ul>
+
+<h2>9. 联系我们</h2>
+<p><a href="mailto:onifide.support@omnaiapps.com">onifide.support@omnaiapps.com</a></p>
+
+<h2>10. 最低年龄</h2>
+<p>Onifide 可供 15 岁及以上用户使用——这是法国的数字成年年龄，低于此年龄时，GDPR 要求数据处理须获得父母的共同同意。由于梦境内容并非出于自愿，它有时可能带出用户并未选择的困难主题；应用会以克制的方式处理这些内容，绝不会突出显示。我们不会有意收集属于 15 岁以下儿童的数据。</p>
+
+<h2>11. 如遇心理困扰</h2>
+<p>Onifide 既不是紧急服务，也不是心理援助热线。如果某个梦或某项练习引发了真实的困扰，请与医疗专业人士或你所在国家的援助热线交谈——如遇紧急危险，请联系急救服务。</p>
+
+<h2>12. 本政策的变更</h2>
+<p>我们可能会更新本政策。任何实质性变更都会在生效前在应用内通知你。</p>
+
+<footer>
+  <span>Onifide — 唤醒你梦境的意义。</span>
+  <a href="mailto:onifide.support@omnaiapps.com">onifide.support@omnaiapps.com</a>
+</footer>
+
+</body>
+</html>

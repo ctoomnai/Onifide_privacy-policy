@@ -1,0 +1,234 @@
+<!-- Onifide privacy policy — French reference version (source: docs/privacy-policy.md), 2026-09-06. -->
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Onifide — Politique de confidentialité</title>
+  <meta name="description" content="Politique de confidentialité d'Onifide : quelles données sont collectées, où elles sont stockées, avec quels tiers elles transitent, et comment les exporter ou les supprimer." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&family=Marcellus&display=swap" />
+  <link rel="canonical" href="https://ctoomnai.github.io/Onifide_privacy-policy/fr/" />
+  <meta name="theme-color" content="#0B1230" />
+  <link rel="alternate" hreflang="en" href="https://ctoomnai.github.io/Onifide_privacy-policy/" />
+  <link rel="alternate" hreflang="fr" href="https://ctoomnai.github.io/Onifide_privacy-policy/fr/" />
+  <link rel="alternate" hreflang="de" href="https://ctoomnai.github.io/Onifide_privacy-policy/de/" />
+  <link rel="alternate" hreflang="es" href="https://ctoomnai.github.io/Onifide_privacy-policy/es/" />
+  <link rel="alternate" hreflang="pt" href="https://ctoomnai.github.io/Onifide_privacy-policy/pt/" />
+  <link rel="alternate" hreflang="ar" href="https://ctoomnai.github.io/Onifide_privacy-policy/ar/" />
+  <link rel="alternate" hreflang="zh" href="https://ctoomnai.github.io/Onifide_privacy-policy/zh/" />
+  <link rel="alternate" hreflang="ko" href="https://ctoomnai.github.io/Onifide_privacy-policy/ko/" />
+  <link rel="alternate" hreflang="ja" href="https://ctoomnai.github.io/Onifide_privacy-policy/ja/" />
+  <link rel="alternate" hreflang="x-default" href="https://ctoomnai.github.io/Onifide_privacy-policy/" />
+  <style>
+    /* Palette de branding.json — meme parti pris que la landing : pas de theme
+       clair, la marque est le bleu nuit. */
+    :root {
+      --night: #0B1230;
+      --night-2: #131A42;
+      --sky: #AFCBFF;
+      --violet: #7C5CFC;
+      --text: #F2F1F8;
+      --text-muted: #8991BD;
+      --border: rgba(255,255,255,.10);
+      --surface: rgba(255,255,255,.05);
+    }
+    * { box-sizing: border-box; }
+    body {
+      font-family: "Nunito", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      max-width: 760px;
+      margin: 0 auto;
+      padding: 48px 22px 72px;
+      color: var(--text);
+      background: var(--night);
+      line-height: 1.65;
+    }
+    .wordmark {
+      font-family: "Marcellus", Georgia, "Times New Roman", serif;
+      text-transform: uppercase;
+      letter-spacing: .2em;
+      padding-left: .2em;
+      font-size: 15px;
+      color: var(--sky);
+      display: block;
+      margin-bottom: 10px;
+    }
+    h1 { font-size: 28px; font-weight: 800; letter-spacing: -0.02em; margin: 0 0 6px; }
+    h2 {
+      font-size: 18px;
+      font-weight: 800;
+      margin: 38px 0 10px;
+      padding-top: 20px;
+      border-top: 1px solid var(--border);
+    }
+    .updated { color: var(--text-muted); font-size: 14px; margin: 0 0 26px; }
+    p, li { font-size: 15.5px; }
+    p { color: var(--text); }
+    a { color: var(--sky); }
+    strong { font-weight: 800; }
+    ul { padding-left: 20px; }
+    li { margin-bottom: 8px; color: var(--text); }
+    table { width: 100%; border-collapse: collapse; margin: 14px 0 4px; font-size: 14px; }
+    th, td { text-align: left; vertical-align: top; padding: 10px 12px; border: 1px solid var(--border); }
+    th { background: var(--night-2); font-weight: 800; color: var(--sky); }
+    td { background: var(--surface); color: var(--text-muted); }
+    td:first-child { color: var(--text); font-weight: 700; white-space: nowrap; }
+    .table-wrap { overflow-x: auto; }
+    .callout {
+      background: rgba(124,92,252,.12);
+      border: 1px solid rgba(124,92,252,.4);
+      border-radius: 14px;
+      padding: 14px 18px;
+      margin: 18px 0;
+    }
+    .callout p { margin: 0; }
+    /* Marqueurs volontairement criards : tant qu'il en reste un visible sur la
+       page, elle n'est pas publiable. */
+    .todo {
+      background: rgba(255,214,102,.18);
+      border: 1px dashed rgba(255,214,102,.6);
+      border-radius: 6px;
+      padding: 1px 6px;
+      color: #FFD666;
+      font-weight: 700;
+      font-size: 13.5px;
+    }
+    footer {
+      margin-top: 44px;
+      padding-top: 20px;
+      border-top: 1px solid var(--border);
+      font-size: 13px;
+      color: var(--text-muted);
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px 18px;
+      justify-content: space-between;
+    }
+    footer a { color: var(--text-muted); }
+      /* Selecteur de langue (9 versions, anglais a la racine). */
+    .langs { display: flex; flex-wrap: wrap; gap: 6px 14px; margin: 0 0 22px; font-size: 13px; }
+    .langs a { color: var(--text-muted); text-decoration: none; }
+    .langs a:hover { color: var(--sky); text-decoration: underline; }
+    .langs a[aria-current="page"] { color: var(--sky); font-weight: 700; }
+  </style>
+</head>
+<body>
+
+<nav class="langs" aria-label="Language"><a href="https://ctoomnai.github.io/Onifide_privacy-policy/" hreflang="en" lang="en">English</a> <a href="https://ctoomnai.github.io/Onifide_privacy-policy/fr/" hreflang="fr" lang="fr" aria-current="page">Français</a> <a href="https://ctoomnai.github.io/Onifide_privacy-policy/de/" hreflang="de" lang="de">Deutsch</a> <a href="https://ctoomnai.github.io/Onifide_privacy-policy/es/" hreflang="es" lang="es">Español</a> <a href="https://ctoomnai.github.io/Onifide_privacy-policy/pt/" hreflang="pt" lang="pt">Português</a> <a href="https://ctoomnai.github.io/Onifide_privacy-policy/ar/" hreflang="ar" lang="ar">العربية</a> <a href="https://ctoomnai.github.io/Onifide_privacy-policy/zh/" hreflang="zh" lang="zh">中文</a> <a href="https://ctoomnai.github.io/Onifide_privacy-policy/ko/" hreflang="ko" lang="ko">한국어</a> <a href="https://ctoomnai.github.io/Onifide_privacy-policy/ja/" hreflang="ja" lang="ja">日本語</a></nav>
+<span class="wordmark">Onifide</span>
+<h1>Politique de confidentialité</h1>
+<p class="updated">Dernière mise à jour : 6 septembre 2026</p>
+
+<p>Cette politique explique quelles données Onifide collecte, pourquoi, où elles sont stockées, et quels sont vos droits. Nous avons essayé de l'écrire de façon lisible plutôt que dans un jargon juridique impénétrable — si un passage reste flou, contactez-nous (voir §9).</p>
+
+<h2>1. Qui est responsable de vos données</h2>
+<p>Onifide est édité par Mohamed Djamil, entreprise individuelle (SIREN 108339714, SIRET établissement principal 108339714 00017), basée à Toulouse, France. C'est le responsable du traitement de vos données au sens du RGPD — la même structure que le premier produit de l'éditeur, TallUp.</p>
+
+<h2>2. Ce qu'Onifide n'est pas</h2>
+<p>Avant de parler de données : Onifide n'est ni une autorité religieuse, ni un service médical ou psychologique. Les interprétations de rêves sont des outils de réflexion générés par IA à partir d'un corpus documentaire, jamais une vérité absolue, un diagnostic ou une prédiction. Voir les <a href="https://onifide.omnaiapps.com/cgu/">conditions d'utilisation</a> pour le détail.</p>
+
+<h2>3. Les données que nous collectons</h2>
+<div class="table-wrap">
+<table>
+  <thead><tr><th>Catégorie</th><th>Exemples</th><th>Pourquoi</th></tr></thead>
+  <tbody>
+    <tr>
+      <td>Compte</td>
+      <td>email, mot de passe (haché), identifiant Apple/Google le cas échéant, langue, courant d'interprétation par défaut</td>
+      <td>Créer et sécuriser votre compte</td>
+    </tr>
+    <tr>
+      <td>Contenu de rêve</td>
+      <td>le texte de vos rêves, la date, l'humeur au réveil, les tags que vous ajoutez</td>
+      <td>Le cœur du service : générer vos interprétations</td>
+    </tr>
+    <tr>
+      <td>Humeur</td>
+      <td>vos entrées d'humeur quotidiennes libres</td>
+      <td>Fonctionnalité de suivi d'humeur</td>
+    </tr>
+    <tr>
+      <td>Exercices</td>
+      <td>les transcripts des exercices réflexifs guidés (association libre, imagination active, réécriture de cauchemar) que vous complétez</td>
+      <td>Sauvegarder votre historique d'exercice</td>
+    </tr>
+    <tr>
+      <td>Profil psychologique évolutif</td>
+      <td>des étiquettes courtes extraites du texte de vos rêves (figures qui reviennent, motifs narratifs, symboles), puis leur comptage — l'analyse d'un rêve n'est faite qu'une fois, et le profil n'affiche que des éléments présents dans au moins deux rêves</td>
+      <td>Fonctionnalité Premium/Ultime de profil évolutif</td>
+    </tr>
+    <tr>
+      <td>Images de rêve</td>
+      <td>l'image générée pour un rêve, quand vous la demandez (Premium/Ultime)</td>
+      <td>Illustration de rêve à la demande</td>
+    </tr>
+    <tr>
+      <td>Technique</td>
+      <td>adresse IP au moment de la requête, logs d'erreur (via Sentry, filtrés — voir §5)</td>
+      <td>Sécurité, fiabilité, débogage</td>
+    </tr>
+    <tr>
+      <td>Abonnement</td>
+      <td>statut d'abonnement, identifiant de transaction du store (Apple/Google)</td>
+      <td>Facturation et accès aux fonctionnalités payantes</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+<p>Nous ne collectons <strong>jamais</strong> de données de localisation précise, de contacts, de photos, ou d'autres données de votre appareil au-delà de ce qui est listé ci-dessus. Le rappel du matin est une notification locale programmée sur votre téléphone : aucun identifiant d'appareil ni aucun contenu ne quitte l'appareil pour la déclencher.</p>
+
+<h2>4. Où vos données sont stockées</h2>
+<p>Vos données sont stockées sur une base de données PostgreSQL hébergée par <strong>Neon</strong>, dans l'Union européenne (région AWS <code>eu-central-1</code>, Francfort, Allemagne). Contrairement à une application qui garderait tout uniquement sur votre appareil, Onifide a besoin d'un serveur pour générer les interprétations et synchroniser votre journal entre vos appareils — c'est un choix d'architecture assumé, pas un oubli.</p>
+<p>Seule exception : les images de rêve générées (Premium/Ultime) sont stockées sur <strong>Cloudflare R2</strong> (stockage de fichiers), dans un espace créé en juridiction Union européenne. Elles y sont identifiées par des identifiants techniques, jamais par votre email ni par le texte du rêve.</p>
+
+<h2>5. Les tiers avec qui vos données transitent</h2>
+<p>Nous n'utilisons que le strict nécessaire, et jamais pour vous cibler publicitairement à partir du contenu de vos rêves (voir §6).</p>
+<ul>
+  <li><strong>OpenAI</strong> (États-Unis) : le texte de vos rêves est envoyé à OpenAI pour générer les vecteurs de similarité (embeddings) qui permettent de retrouver le contenu pertinent dans notre bibliothèque documentaire, puis pour rédiger l'interprétation elle-même. Le texte d'un rêve est également envoyé une seule fois pour en extraire les étiquettes qui alimentent le profil psychologique évolutif (figures, motifs, symboles) ; l'agrégation qui suit est faite chez nous, sans nouvel envoi. En revanche, la génération d'une image de rêve ne reçoit <strong>jamais</strong> le texte brut : elle part uniquement des symboles déjà extraits, transformés en une courte description visuelle. OpenAI traite ces données pour notre compte, dans le cadre d'un accord de traitement de données. Les données envoyées via l'API d'OpenAI ne sont pas utilisées pour entraîner ses modèles (c'est le fonctionnement par défaut de l'API, contrairement au ChatGPT grand public) et sont conservées par OpenAI au maximum 30 jours à des fins de détection d'abus, puis supprimées.</li>
+  <li><strong>Sentry</strong> (suivi d'erreurs) : les erreurs techniques de l'application sont remontées à Sentry pour nous permettre de corriger les bugs. Les champs de texte libre (contenu de rêve, notes d'humeur, transcripts d'exercice) sont explicitement filtrés (scrubbing) avant tout envoi — ils ne doivent jamais apparaître dans un événement Sentry.</li>
+  <li><strong>Cloudflare</strong> (stockage R2) : héberge uniquement les images de rêve générées (voir §4). Cloudflare ne reçoit jamais le texte de vos rêves ni aucune autre donnée de votre journal — seulement le fichier image lui-même. Ces images sont supprimées de R2 en même temps que votre compte.</li>
+  <li><strong>Reconnaissance vocale du système (Apple / Google)</strong> : si vous <strong>dictez</strong> un rêve au lieu de le taper, l'application utilise en priorité la reconnaissance vocale <strong>de votre appareil, hors ligne</strong> — dans ce cas l'audio ne quitte jamais votre téléphone. Lorsque votre appareil ne sait pas transcrire hors ligne (selon son modèle, la version de son système d'exploitation ou la langue), la transcription est effectuée par le service de reconnaissance vocale du système (Apple ou Google), à qui l'audio est alors transmis le temps de la transcription. Nous, de notre côté, ne recevons que le <strong>texte</strong> transcrit, jamais l'audio. Taper votre rêve au clavier n'implique aucun de ces services.</li>
+  <li><strong>Apple / Google</strong> : pour l'authentification « Se connecter avec Apple/Google » si vous choisissez cette option, et pour la gestion des abonnements via les stores.</li>
+  <li><strong>RevenueCat</strong> : gère l'état de votre abonnement entre les stores et notre serveur. Reçoit un identifiant d'abonné et les informations d'achat transmises par le store, jamais le contenu de votre journal.</li>
+  <li><strong>Brevo</strong> (envoi d'e-mails, Union européenne) : achemine uniquement les e-mails de service que vous déclenchez vous-même — le code de vérification de votre adresse et le code de réinitialisation de mot de passe. Brevo reçoit votre adresse e-mail et le contenu de ce message, jamais le contenu de votre journal. Nous n'envoyons aucune newsletter ni e-mail marketing.</li>
+</ul>
+<p>Nous ne vendons vos données à personne, jamais.</p>
+
+<h2>6. Publicité et absence de ciblage sur le contenu de vos rêves</h2>
+<div class="callout">
+  <p><strong>Onifide n'embarque aucun SDK publicitaire.</strong> Le tier gratuit est un essai (un premier rêve offert), pas un tier financé par la publicité — il n'y a donc aucune régie qui reçoive quoi que ce soit.</p>
+</div>
+<p>Si une publicité devait être introduite un jour, l'engagement suivant resterait entier : aucune régie ne recevrait le contenu de vos rêves, vos notes d'humeur, les transcripts de vos exercices, ni aucun signal calculé à partir de ces données. Il n'y aura jamais de « ciblage intelligent » basé sur ce que vous confiez à votre journal.</p>
+
+<h2>7. Combien de temps nous gardons vos données</h2>
+<p>Vos données sont conservées tant que votre compte existe. Si vous supprimez votre compte (disponible directement dans Réglages), vos données (rêves, interprétations, images de rêve, humeur, exercices, profils psychologiques, et le compte lui-même) sont supprimées <strong>immédiatement et définitivement</strong> de notre base active et du stockage d'images — il ne s'agit pas d'une désactivation, la suppression est réelle. L'historique technique de restauration conservé par notre hébergeur de base de données expire ensuite automatiquement, sous 7 jours au plus. Les événements d'erreur (Sentry) sont conservés 90 jours au maximum, à usage de sécurité et de débogage uniquement.</p>
+
+<h2>8. Vos droits</h2>
+<p>Conformément au RGPD (et pour tous nos utilisateurs, où qu'ils soient, pas seulement dans l'Union européenne), vous pouvez à tout moment :</p>
+<ul>
+  <li><strong>Exporter vos données</strong> : Réglages → « Exporter mes données » génère un export complet (rêves, interprétations, humeur, exercices, profils psychologiques) au format JSON.</li>
+  <li><strong>Supprimer votre compte</strong> : Réglages → « Supprimer mon compte » — action définitive et irréversible.</li>
+  <li><strong>Accéder, rectifier ou vous opposer</strong> au traitement de vos données : contactez-nous (§9).</li>
+  <li><strong>Introduire une réclamation</strong> auprès de la CNIL (Commission Nationale de l'Informatique et des Libertés, <a href="https://www.cnil.fr">www.cnil.fr</a>) si vous estimez que vos droits ne sont pas respectés.</li>
+</ul>
+
+<h2>9. Nous contacter</h2>
+<p><a href="mailto:onifide.support@omnaiapps.com">onifide.support@omnaiapps.com</a></p>
+
+<h2>10. Âge minimum</h2>
+<p>Onifide est utilisable à partir de 15 ans — l'âge de la majorité numérique en France, en dessous duquel le RGPD exige un consentement parental conjoint pour le traitement des données. Le contenu des rêves étant involontaire, il peut parfois faire remonter des thèmes difficiles que l'utilisateur n'a pas choisis ; l'application les traite avec sobriété et ne les met jamais en avant. Nous ne collectons pas sciemment de données appartenant à des enfants de moins de 15 ans.</p>
+
+<h2>11. En cas de détresse psychologique</h2>
+<p>Onifide n'est ni un service d'urgence, ni une ligne d'écoute. Si un rêve ou un exercice fait remonter une détresse réelle, parlez-en à un professionnel de santé ou à un service d'écoute de votre pays — et en cas de danger immédiat, contactez les secours.</p>
+
+<h2>12. Modifications de cette politique</h2>
+<p>Nous pouvons mettre à jour cette politique. Toute modification substantielle vous sera signalée dans l'application avant son entrée en vigueur.</p>
+
+<footer>
+  <span>Onifide — Réveille le sens de tes rêves.</span>
+  <a href="mailto:onifide.support@omnaiapps.com">onifide.support@omnaiapps.com</a>
+</footer>
+
+</body>
+</html>
