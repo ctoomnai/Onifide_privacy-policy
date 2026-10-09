@@ -118,7 +118,7 @@
 <nav class="langs" aria-label="Language"><a href="https://ctoomnai.github.io/Onifide_privacy-policy/" hreflang="en" lang="en">English</a> <a href="https://ctoomnai.github.io/Onifide_privacy-policy/fr/" hreflang="fr" lang="fr" aria-current="page">Français</a> <a href="https://ctoomnai.github.io/Onifide_privacy-policy/de/" hreflang="de" lang="de">Deutsch</a> <a href="https://ctoomnai.github.io/Onifide_privacy-policy/es/" hreflang="es" lang="es">Español</a> <a href="https://ctoomnai.github.io/Onifide_privacy-policy/pt/" hreflang="pt" lang="pt">Português</a> <a href="https://ctoomnai.github.io/Onifide_privacy-policy/ar/" hreflang="ar" lang="ar">العربية</a> <a href="https://ctoomnai.github.io/Onifide_privacy-policy/zh/" hreflang="zh" lang="zh">中文</a> <a href="https://ctoomnai.github.io/Onifide_privacy-policy/ko/" hreflang="ko" lang="ko">한국어</a> <a href="https://ctoomnai.github.io/Onifide_privacy-policy/ja/" hreflang="ja" lang="ja">日本語</a></nav>
 <span class="wordmark">Onifide</span>
 <h1>Politique de confidentialité</h1>
-<p class="updated">Dernière mise à jour : 6 septembre 2026</p>
+<p class="updated">Dernière mise à jour : 8 octobre 2026</p>
 
 <p>Cette politique explique quelles données Onifide collecte, pourquoi, où elles sont stockées, et quels sont vos droits. Nous avons essayé de l'écrire de façon lisible plutôt que dans un jargon juridique impénétrable — si un passage reste flou, contactez-nous (voir §9).</p>
 
@@ -178,6 +178,11 @@
       <td>statut d'abonnement, identifiant de transaction du store (Apple/Google)</td>
       <td>Facturation et accès aux fonctionnalités payantes</td>
     </tr>
+    <tr>
+      <td>Statistiques d'usage (désactivables)</td>
+      <td>les étapes franchies dans l'app (ouverture, rêve noté, lecture obtenue, écran d'abonnement vu, achat…), la version de l'app, le système (iOS ou Android), la langue de l'app et un identifiant tiré au hasard sur votre téléphone, renouvelé chaque année — jamais le contenu de votre journal, ni votre compte, ni votre email</td>
+      <td>Savoir, de façon anonyme, ce qui marche dans l'app et ce qui bloque — désactivable à tout moment (Réglages → « Statistiques d'usage anonymes »)</td>
+    </tr>
   </tbody>
 </table>
 </div>
@@ -192,11 +197,12 @@
 <ul>
   <li><strong>OpenAI</strong> (États-Unis) : le texte de vos rêves est envoyé à OpenAI pour générer les vecteurs de similarité (embeddings) qui permettent de retrouver le contenu pertinent dans notre bibliothèque documentaire, puis pour rédiger l'interprétation elle-même. Le texte d'un rêve est également envoyé une seule fois pour en extraire les étiquettes qui alimentent le profil psychologique évolutif (figures, motifs, symboles) ; l'agrégation qui suit est faite chez nous, sans nouvel envoi. En revanche, la génération d'une image de rêve ne reçoit <strong>jamais</strong> le texte brut : elle part uniquement des symboles déjà extraits, transformés en une courte description visuelle. OpenAI traite ces données pour notre compte, dans le cadre d'un accord de traitement de données. Les données envoyées via l'API d'OpenAI ne sont pas utilisées pour entraîner ses modèles (c'est le fonctionnement par défaut de l'API, contrairement au ChatGPT grand public) et sont conservées par OpenAI au maximum 30 jours à des fins de détection d'abus, puis supprimées.</li>
   <li><strong>Sentry</strong> (suivi d'erreurs) : les erreurs techniques de l'application sont remontées à Sentry pour nous permettre de corriger les bugs. Les champs de texte libre (contenu de rêve, notes d'humeur, transcripts d'exercice) sont explicitement filtrés (scrubbing) avant tout envoi — ils ne doivent jamais apparaître dans un événement Sentry.</li>
+  <li><strong>TelemetryDeck</strong> (mesure d'audience de l'app, Allemagne, Union européenne) : reçoit les statistiques d'usage décrites au §3 — des noms d'étapes fixes, la version de l'app, le système, la langue de l'app et un identifiant tiré au hasard, sans lien avec votre compte ni votre email. Jamais le texte de vos rêves, de vos questions ou de vos exercices, ni aucune autre donnée de votre journal. Couper « Statistiques d'usage anonymes » dans les Réglages arrête l'envoi et efface cet identifiant.</li>
   <li><strong>Cloudflare</strong> (stockage R2) : héberge uniquement les images de rêve générées (voir §4). Cloudflare ne reçoit jamais le texte de vos rêves ni aucune autre donnée de votre journal — seulement le fichier image lui-même. Ces images sont supprimées de R2 en même temps que votre compte.</li>
   <li><strong>Reconnaissance vocale du système (Apple / Google)</strong> : si vous <strong>dictez</strong> un rêve au lieu de le taper, l'application utilise en priorité la reconnaissance vocale <strong>de votre appareil, hors ligne</strong> — dans ce cas l'audio ne quitte jamais votre téléphone. Lorsque votre appareil ne sait pas transcrire hors ligne (selon son modèle, la version de son système d'exploitation ou la langue), la transcription est effectuée par le service de reconnaissance vocale du système (Apple ou Google), à qui l'audio est alors transmis le temps de la transcription. Nous, de notre côté, ne recevons que le <strong>texte</strong> transcrit, jamais l'audio. Taper votre rêve au clavier n'implique aucun de ces services.</li>
   <li><strong>Apple / Google</strong> : pour l'authentification « Se connecter avec Apple/Google » si vous choisissez cette option, et pour la gestion des abonnements via les stores.</li>
   <li><strong>RevenueCat</strong> : gère l'état de votre abonnement entre les stores et notre serveur. Reçoit un identifiant d'abonné et les informations d'achat transmises par le store, jamais le contenu de votre journal.</li>
-  <li><strong>Brevo</strong> (envoi d'e-mails, Union européenne) : achemine uniquement les e-mails de service que vous déclenchez vous-même — le code de vérification de votre adresse et le code de réinitialisation de mot de passe. Brevo reçoit votre adresse e-mail et le contenu de ce message, jamais le contenu de votre journal. Nous n'envoyons aucune newsletter ni e-mail marketing.</li>
+  <li><strong>Brevo</strong> (envoi d'e-mails, Union européenne) : achemine uniquement les e-mails de service que vous déclenchez vous-même — le code de vérification de votre adresse et le code de réinitialisation de mot de passe. Brevo reçoit votre adresse e-mail et le contenu de ce message, jamais le contenu de votre journal. Il achemine aussi le guide gratuit et les emails de conseils, uniquement si vous les avez demandés (§3, §7) — aucune autre newsletter.</li>
 </ul>
 <p>Nous ne vendons vos données à personne, jamais.</p>
 
@@ -209,6 +215,7 @@
 <h2>7. Combien de temps nous gardons vos données</h2>
 <p>Vos données sont conservées tant que votre compte existe. Si vous supprimez votre compte (disponible directement dans Réglages), vos données (rêves, interprétations, images de rêve, humeur, exercices, profils psychologiques, et le compte lui-même) sont supprimées <strong>immédiatement et définitivement</strong> de notre base active et du stockage d'images — il ne s'agit pas d'une désactivation, la suppression est réelle. L'historique technique de restauration conservé par notre hébergeur de base de données expire ensuite automatiquement, sous 7 jours au plus. Les événements d'erreur (Sentry) sont conservés 90 jours au maximum, à usage de sécurité et de débogage uniquement.</p>
 <p class="guide-retention">Si tu as demandé le guide gratuit et les emails de conseils, ton consentement est conservé jusqu'à ta désinscription (lien dans chaque email, ou interrupteur dans les réglages de l'app) ou jusqu'à la suppression de ton compte, qui arrête tous les envois d'un coup. Ces emails transitent par notre prestataire d'emails (Brevo) sans qu'aucune liste de contacts n'y soit constituée. Une adresse laissée sur notre site sans compte est supprimée sur demande (§9).</p>
+<p>L'identifiant de mesure d'audience (TelemetryDeck) est renouvelé chaque année, et effacé si vous coupez les statistiques d'usage ou désinstallez l'app. Il n'est relié ni à votre compte ni à votre email, et ne nous dit pas qui vous êtes.</p>
 
 <h2>8. Vos droits</h2>
 <p>Conformément au RGPD (et pour tous nos utilisateurs, où qu'ils soient, pas seulement dans l'Union européenne), vous pouvez à tout moment :</p>
