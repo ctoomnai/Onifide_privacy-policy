@@ -118,7 +118,7 @@
 <nav class="langs" aria-label="Language"><a href="https://ctoomnai.github.io/Onifide_privacy-policy/" hreflang="en" lang="en">English</a> <a href="https://ctoomnai.github.io/Onifide_privacy-policy/fr/" hreflang="fr" lang="fr">Français</a> <a href="https://ctoomnai.github.io/Onifide_privacy-policy/de/" hreflang="de" lang="de">Deutsch</a> <a href="https://ctoomnai.github.io/Onifide_privacy-policy/es/" hreflang="es" lang="es">Español</a> <a href="https://ctoomnai.github.io/Onifide_privacy-policy/pt/" hreflang="pt" lang="pt">Português</a> <a href="https://ctoomnai.github.io/Onifide_privacy-policy/ar/" hreflang="ar" lang="ar">العربية</a> <a href="https://ctoomnai.github.io/Onifide_privacy-policy/zh/" hreflang="zh" lang="zh" aria-current="page">中文</a> <a href="https://ctoomnai.github.io/Onifide_privacy-policy/ko/" hreflang="ko" lang="ko">한국어</a> <a href="https://ctoomnai.github.io/Onifide_privacy-policy/ja/" hreflang="ja" lang="ja">日本語</a></nav>
 <span class="wordmark">Onifide</span>
 <h1>隐私政策</h1>
-<p class="updated">最后更新：2026年10月9日</p>
+<p class="updated">最后更新：2026年10月15日</p>
 <p class="updated">本译文仅供参考。如有出入，以法语版本为准。</p>
 
 <p>本政策说明 Onifide 收集哪些数据、为何收集、数据存储在哪里，以及你享有哪些权利。我们尽量以易读的方式来写，而不是使用晦涩难懂的法律术语——如果某段内容仍不清楚，请联系我们（见第9条）。</p>
@@ -203,7 +203,7 @@
 <ul>
   <li><strong>OpenAI</strong>（美国）：你的梦境文本会被发送至 OpenAI，用于生成相似度向量（embeddings），以便在我们的文献库中找到相关内容，随后用于撰写解读本身。一个梦的文本还会被发送一次，用于提取为演进式心理画像提供数据的标签（人物、母题、符号）；之后的汇总在我们这里完成，不会再次发送。相反，梦境图片的生成<strong>绝不</strong>会接收原始文本：它仅基于已提取的符号，这些符号会被转化为一段简短的视觉描述。OpenAI 依据数据处理协议代表我们处理这些数据。通过 OpenAI API 发送的数据不会用于训练其模型（这是 API 的默认运作方式，与面向大众的 ChatGPT 不同），并由 OpenAI 最多保留 30 天用于滥用检测，之后删除。</li>
   <li><strong>Sentry</strong>（错误追踪）：应用的技术错误会上报至 Sentry，以便我们修复缺陷。自由文本字段（梦境内容、心情笔记、练习对话记录）在任何发送之前都会被明确过滤（scrubbing）——它们绝不应出现在任何 Sentry 事件中。</li>
-  <li><strong>TelemetryDeck</strong>（应用受众统计，德国，欧盟）：接收第3节（§3）所述的使用统计——固定的步骤名称、应用版本、系统、应用语言，以及一个随机生成、与你的账户和电子邮箱均无关联的标识符。绝不接收你的梦境、提问或练习的文字，也不接收你日记中的任何其他数据。在“设置”中关闭“匿名使用统计”即可停止发送并删除该标识符。</li>
+  <li><strong>TelemetryDeck</strong>（应用受众统计，德国，欧盟）：接收第3节（§3）所述的使用统计——固定的步骤名称（订阅页面附带其打开的位置，购买附带所选方案）、应用版本、系统、应用语言，以及一个随机生成、与你的账户和电子邮箱均无关联的标识符。绝不接收你的梦境、提问或练习的文字，也不接收你日记中的任何其他数据。在“设置”中关闭“匿名使用统计”即可停止发送并删除该标识符。</li>
   <li><strong>Cloudflare</strong>（R2 存储）：仅托管生成的梦境图片（见第4条）。Cloudflare 绝不会收到你的梦境文本或你日记中的任何其他数据——只有图片文件本身。这些图片会在你删除账户的同时从 R2 中删除。</li>
   <li><strong>系统语音识别（Apple / Google）</strong>：如果你选择<strong>口述</strong>梦境而不是打字输入，应用会优先使用<strong>你设备上的离线</strong>语音识别——在这种情况下，音频绝不会离开你的手机。当你的设备无法离线转写时（取决于机型、操作系统版本或语言），转写将由系统的语音识别服务（Apple 或 Google）完成，音频会在转写期间传输给该服务。而我们这边只会收到转写后的<strong>文本</strong>，绝不会收到音频。用键盘输入梦境则不涉及上述任何服务。</li>
   <li><strong>Apple / Google</strong>：如果你选择“通过 Apple/Google 登录”这一选项，用于身份验证；以及通过应用商店管理订阅。</li>
